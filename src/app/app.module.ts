@@ -9,9 +9,23 @@ import { CustomerDetailsComponent } from './customers/customer-details/customer-
 import { CustomersListComponent } from './customers/customers-list/customers-list.component';
 import { CreateCustomerComponent } from './customers/create-customer/create-customer.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environiment } from '../environiments/environiments';
+
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, CustomerDetailsComponent, CustomersListComponent, CreateCustomerComponent ],
+  imports:      [ 
+    BrowserModule, 
+    FormsModule,
+    AngularFireModule.initializeApp(environiment.firebase),
+    AngularFireDatabaseModule, // for database 
+    ],
+  declarations: [ 
+    AppComponent, 
+    HelloComponent, 
+    CustomerDetailsComponent, 
+    CustomersListComponent, 
+    CreateCustomerComponent ],
   bootstrap:    [ AppComponent ],
   providers: [CustomerService]
 })

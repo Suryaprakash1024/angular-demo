@@ -6,6 +6,6 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  title = 'Angular ' + VERSION.major;
-  description = 'desc';
+  title = 'Customer List';
+  description = 'Find your customers and use it';
 }

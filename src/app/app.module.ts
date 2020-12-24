@@ -12,11 +12,13 @@ import { CreateCustomerComponent } from './customers/create-customer/create-cust
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environiment } from '../environiments/environiments';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   imports:      [ 
     BrowserModule, 
     FormsModule,
+    AppRoutingModule,
     AngularFireModule.initializeApp(environiment.firebase),
     AngularFireDatabaseModule, // for database 
     ],
